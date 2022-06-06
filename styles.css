@@ -1,0 +1,76 @@
+.navt{
+    text-align: right;
+    margin-right: 30px;
+}
+.bg-image{
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./images/backgrnd.jpg);
+
+    height: 50vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 100px;
+}
+.heading{
+    font-size: 24px;
+    font-weight: 100;
+    color: white;
+}
+p{
+    margin-bottom: 1rem;
+}
+.input-box {
+    width: 80%;
+    height: 50px;
+    padding: 16px;
+    border-radius: 8px;
+    border: none;
+}
+.tile {
+    cursor: pointer;
+    transition: 0.2s all;
+    -webkit-transition: 0.2s all;
+    overflow: hidden;
+}
+
+.tile img, img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.2s all;
+    -webkit-transition: 0.2s all;
+    
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.placeimg{
+    position: relative;
+}
+.tile img:hover{
+    transform: scale(1.1);
+    filter: brightness(50%);
+}
+.tile-text {
+    width: 100%;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    bottom: 2.5rem;
+    z-index: 1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+body{
+    overflow-x: hidden;
+}
