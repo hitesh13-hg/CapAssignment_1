@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QTrip</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./form.css">
+  </head>
+
+<body class="bg-image">
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">QTrip</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end w-100">
+              <li class="nav-item navt">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item navt">
+                <a class="nav-link active" href="#">Reservations</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <br />
+
+    
+
+    <div class="container" >
+        <form class="row g-3">
+          <div class="col-6">
+            <label for="fname"><b>Name</b></label>
+            <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+          </div>
+          <div class="col-6">
+            <br/>
+            <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+          </div>
+            <br/>
+              <div class="col-6">
+                <label for="inputEmail"><b>Email</b></label>
+                <input type="text" class="form-control" id="inputEmail" placeholder="Email" required>
+                <span id="valemail" style="color: red"></span>
+              </div>
+            <br />
+            <div class="col-6">
+              <label for="mobile"><b>Mobile Number</b></label>
+              <div class="input-group">
+                <span class="input-group-text">+91</span>
+                <input type="text" class="form-control" id="mobile" placeholder="xxxxx-xxxxx" required>
+                <span id="valmob" style="color: red"></span>
+              </div>  
+            </div>
+            <br />
+            
+            <div class="col-4">
+                <label for="date"><b>Arrival Date</b></label>
+                <input type="date" class="form-control" id="date" placeholder="dd-mm-yyyyy" required>
+                <span id="dateof" style="color: red"></span>
+              </div>
+
+              <div class="col-4">
+                <label for="ddate"><b>Departure Date</b></label>
+                <input type="date" class="form-control" id="ddate" placeholder="dd-mm-yyyyy" required>
+                <span id="ddateof" style="color: red"></span>
+              </div>
+              
+            
+            <br />
+            <div class="col-4">
+                <label for="npeople"><b>No. of Members</b></label>
+                <input type="number" class="form-control" id="npeople" placeholder="1-15" step="1"  min="1" max="15" required>
+              </div>
+              <br/>
+              <div class="col-12 sbutton text-center">
+                <button type="submit" class="btn btn-primary" onclick="formValidation()">Submit</button>
+              </div>
+        </form>
+    </div>
+    
+    <script src="./form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+</body>
+</html>
