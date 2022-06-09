@@ -8,7 +8,7 @@ hpCharacters = [{"name":"Bengaluru","places":"100","indian":true,"image":"./imag
 {"name":"Malaysia","places":"100","indian":false,"image":"./images/malasia.jpeg"},
 {"name":"New York","places":"100","indian":false,"image":"./images/newyork.jpg"},
 {"name":"Bangkok","places":"100","indian":false,"image":"./images/bangkok.jpg"},
-{"name":"Singapore","places":"100","indian":false,"image":"./images/singapore.jpg"},
+{"name":"Singapore","places":"250","indian":false,"image":"./images/singapore.jpg"},
 {"name":"Mumbai","places":"100","indian":true,"image":"./images/mumbai.jpg"},
 {"name":"Rishikesh","places":"250","indian":true,"image":"./images/rishi.jpg"},
 {"name":"Amritsar","places":"100","indian":true,"image":"./images/asr.jfif"},
@@ -56,37 +56,6 @@ const displayCharacters = (cities) => {
 
 loadCharacters();
 
-/* const btns = document.querySelectorAll('.btn');
-
-function objectFilter(){
-    
-    for (i = 0; i < btns.length; i++) {
-
-        btns[i].addEventListener('click', (e) => {
-        e.preventDefault()
-            const storeProducts = document.querySelectorAll('.city');
-            const filter = e.target.dataset.filter;
-            console.log(filter);
-        
-            storeProducts.forEach((product)=> {
-            let attributeValue = product.getAttribute("country");
-            console.log(product);
-            if (filter === 'all'){
-                product.style.display = 'block'
-            } else {
-                if (attributeValue===filter){
-                    product.style.display = 'block'
-                } else {
-                    product.style.display = 'none'
-                }
-            }
-        });
-        });
-};
-}
-objectFilter();
- */
-const vals = document.querySelectorAll('.drop');
 
 function objectFilterD(){
     
@@ -115,11 +84,23 @@ function objectFilterD(){
 }
 objectFilterD();
 
+var debBtn=document.getElementById("nmenu");
+const debounce = (func, delay) => {
+    let debounceTimer
+    return function() {
+        const context = this
+        const args = arguments
+            clearTimeout(debounceTimer)
+                debounceTimer
+            = setTimeout(() => func.apply(context, args), delay)
+    }
+} 
+
 
 function objectFilterDn(){
     
     
-        document.getElementById("nmenu").addEventListener('change', (e) => {
+        debBtn.addEventListener('change', debounce((e) => {
         e.preventDefault()
             const storeProducts = document.querySelectorAll('.city');
             const filter = e.target.value;
@@ -138,7 +119,7 @@ function objectFilterDn(){
                 }
             }
         });
-        });
+        },1000));
 
 }
 objectFilterDn();
